@@ -1,0 +1,74 @@
+<div class="container mt-4">
+  <div class="card shadow-lg rounded">
+    <div class="card-header d-flex justify-content-between align-items-center bg-dark text-white">
+      <h4 class="mb-0"><i class="fas fa-user-plus"></i> Nuevo usuario</h4>
+      <button class="btn btn-success btn-sm" (click)="goBack()">
+        <i class="fas fa-arrow-circle-left"></i> Volver
+      </button>
+    </div>
+
+    <div class="card-body">
+      <form [formGroup]="userForm" (ngSubmit)="AddUser()">
+        <!-- First Name -->
+        <div class="mb-3 row">
+          <label for="firstName" class="col-sm-3 col-form-label">Nombre<span class="requiredStar">*</span></label>
+          <div class="col-sm-9">
+            <input type="text" id="firstName" class="form-control" formControlName="firstName" required>
+          </div>
+        </div>
+
+        <!-- Last Name -->
+        <div class="mb-3 row">
+          <label for="lastName" class="col-sm-3 col-form-label">Apellido<span class="requiredStar">*</span></label>
+          <div class="col-sm-9">
+            <input type="text" id="lastName" class="form-control" formControlName="lastName" required>
+          </div>
+        </div>
+
+        <!-- RUT -->
+        <div class="mb-3 row">
+          <label for="rut" class="col-sm-3 col-form-label">RUT<span class="requiredStar">*</span></label>
+          <div class="col-sm-9">
+            <input type="number" id="rut" class="form-control" formControlName="rut" required>
+          </div>
+        </div>
+
+        <!-- DV -->
+        <div class="mb-3 row">
+          <label for="dv" class="col-sm-3 col-form-label">DV<span class="requiredStar">*</span></label>
+          <div class="col-sm-9">
+            <input type="text" id="dv" class="form-control" formControlName="dv" required>
+          </div>
+        </div>
+
+        <!-- Birth Date -->
+        <div class="mb-3 row">
+          <label for="birthDate" class="col-sm-3 col-form-label">Fecha de nacimiento<span class="requiredStar">*</span></label>
+          <div class="col-sm-9">
+            <input type="date" id="birthDate" class="form-control" formControlName="birthDate" required>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3 row">
+          <label for="emailAddress" class="col-sm-3 col-form-label">Correo<span class="requiredStar">*</span></label>
+          <div class="col-sm-9">
+            <input type="email" id="emailAddress" class="form-control" formControlName="emailAddress" required>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3 row">
+          <label for="password" class="col-sm-3 col-form-label">Contraseña<span class="requiredStar">*</span></label>
+          <div class="col-sm-9">
+            <input type="password" id="password" class="form-control" formControlName="password" required>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-primary"><i class="fas fa-check-circle"></i> Crear</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
